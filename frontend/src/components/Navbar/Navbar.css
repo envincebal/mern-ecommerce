@@ -1,0 +1,28 @@
+.main-title{
+  color: aquamarine !important;
+  font-weight: 700;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+}
+
+.link-item{
+  padding: 0;
+  color: #fff;
+}
+
+.bi-cart2{
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+.cart-counter{
+  color: #fff;
+
+}
