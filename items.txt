@@ -1,20 +1,58 @@
-Cobratype Anaconda Gaming Desktop 2,999.99
-ABS Master Gaming PC 1,099.99
-Skytech Prism II 4,499.99
-Skytech Archangel 949.99
-ROG Strix GL10DH 894.55
-Acer Nitro 50  849.00
-LOONGTR 999.00
-CLX SET $5,389.49
-CyberpowerPC  1,899.99
-Yeyian 1,299.00
-
-Motorola Moto G8 Power $159.99
-Samsung Galaxy S20 $549.99
-Google Pixel 5 5G $749.99
-LG Velvet $306.85
-Sony Xperia 10 II $308.65
-Apple iPhone 12 Pro Max $1,255.50
-Samsung Galaxy Note 10+ $649.99
-Apple iPhone 12 $879.95
-Apple iPhone SE $251.99
+"name": "Cobratype Anaconda Gaming PC", 
+"price": 2999.99, 
+"category": "PC" 
+"name": "ABS Master Gaming PC", 
+"price": 1099.99, 
+"category": "PC" 
+"name": "Skytech Prism II Gaming PC", 
+"price": 4499.99, 
+"category": "PC" 
+"name": "Skytech Archangel Gaming PC", 
+"price": 949.99, 
+"category": "PC" 
+"name": "ROG Strix GL10DH Gaming PC", 
+"price": 894.55, 
+"category": "PC" 
+"name": "Acer Nitro 50 Gaming PC", 
+"price":   849.00, 
+"category": "PC" 
+"name": "LOONGTR Gaming PC", 
+"price": 999.00, 
+"category": "PC" 
+"name": "CLX SET Gaming PC", 
+"price": $5389.49, 
+"category": "PC" 
+"name": "CyberpowerPC Gaming PC", 
+"price":  1899.99, 
+"category": "PC" 
+"name": "Yeyian Gaming PC", 
+"price": 1299.00, 
+"category": "PC" 
+ 
+"name": "Motorola Moto G8 Power", 
+"price": 159.99, 
+"category": "smartphone" 
+"name": "Samsung Galaxy S20", 
+"price": 549.99, 
+"category": "smartphone" 
+"name": "Google Pixel 5 5G", 
+"price": 749.99, 
+"category": "smartphone" 
+"name": "LG Velvet", 
+"price": 306.85, 
+"category": "smartphone" 
+"name": "Sony Xperia 10 II", 
+"price": 308.65, 
+"category": "smartphone" 
+"name": "Apple iPhone 12 Pro Max", 
+"price": 1255.50, 
+"category": "smartphone" 
+"name": "Samsung Galaxy Note 10+", 
+"price": 649.99, 
+"category": "smartphone" 
+"name": "Apple iPhone 12", 
+"price": 879.95, 
+"category": "smartphone" 
+"name": "Apple iPhone SE", 
+"category": "smartphone", 
+"price": 251.99 

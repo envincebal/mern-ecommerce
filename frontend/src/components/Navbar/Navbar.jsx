@@ -31,16 +31,18 @@ export const NavigationBar = () => {
           </Button>
         </Link>
         <div className="cart-div">
-        <Link to={"/cart"}>
-
+          <Link to={"/cart"}>
             <i className="bi bi-cart2 link-item"></i>
-          
-        </Link>
-        <span className="cart-counter">0</span>
+          </Link>
+          <span className="cart-counter">0</span>
         </div>
 
         <Link to="/">
-          <Button className="link-item" variant="danger" onClick={() => this.onLogOut()}>
+          <Button
+            className="link-item"
+            variant="danger"
+            onClick={() => this.onLogOut()}
+          >
             Log Out
           </Button>
         </Link>

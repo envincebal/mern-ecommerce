@@ -1,0 +1,15 @@
+.product-card{
+  width: 300px;
+  border: 0.2px solid #b9b7b7;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+} 
+
+.product-image{
+  width: 100%; 
+  padding: 1rem; 
+}
+
+.product-details{
+  padding: 1rem;
+}
