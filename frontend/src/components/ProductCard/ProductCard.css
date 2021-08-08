@@ -3,13 +3,23 @@
   border: 0.2px solid #b9b7b7;
   border-radius: 5px;
   margin-bottom: 2rem;
-} 
+}
 
 .product-image{
-  width: 100%; 
-  padding: 1rem; 
+  width: 100%;
+  padding: 1rem;
 }
 
 .product-details{
   padding: 1rem;
+}
+
+.view-item-button{
+  width: 100%;
+  border: none;
+  background-color: #11136d;
+  color: #fff;
+  font-weight: 500;
+  padding: .5rem 0;
+  font-size: 1.2rem;
 }

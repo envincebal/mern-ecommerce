@@ -1,7 +1,19 @@
+.products-container{
+  display: flex; 
+  padding-top: 7rem; 
+}
+
+.aside-bar{
+ 
+
+}
+
 .items-div{
+
   max-width: 70%; 
   margin: 0 auto;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
 }
+

@@ -8,7 +8,7 @@ import "./Navbar.css";
 
 export const NavigationBar = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className="navbar" bg="dark" variant="dark">
       <Link to={"/"}>
         <Navbar.Brand className="main-title">Tech Store</Navbar.Brand>
       </Link>
