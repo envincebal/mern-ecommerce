@@ -17,14 +17,22 @@ const ProductsPage = () => {
   };
 
   const filterProducts = (e) => {
-    const target = e.target.className;
-    axios("http://localhost:8000/products").then((res) => {
+    axios("http://localhost:8000/products")
+    .then(res => {
+      const target = e.target.className;
       const products = res.data;
+      const filteredProducts = products.filter(
+        (item) => item.category === target
+      );
 
-      if (target === "PC")
-        productItems.filter((item) => {
-          return setProductItems(item.category === target);
-        });
+      if (target === "PC") {
+        setProductItems(filteredProducts);
+      }else if (target === "smartphone") {
+        setProductItems(filteredProducts);
+      }else{
+        setProductItems(products);
+      }
+      
     });
   };
 
@@ -37,11 +45,15 @@ const ProductsPage = () => {
       <div className="products-container">
         <div className="aside-bar">
           <h3>Categories</h3>
-          <p className="all">All</p>
+          <p className="all" onClick={filterProducts}>
+            All
+          </p>
           <p className="PC" onClick={filterProducts}>
             Gaming PCs
           </p>
-          <p>Smartphones</p>
+          <p className="smartphone" onClick={filterProducts}>
+            Smartphones
+          </p>
         </div>
         {console.log(productItems)}
         <div className="items-div">
