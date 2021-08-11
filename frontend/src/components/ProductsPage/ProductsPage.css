@@ -1,16 +1,21 @@
 .products-container{
-  display: flex; 
-  padding-top: 7rem; 
+  display: flex;
+  padding-top: 7rem;
 }
 
 .aside-bar{
- 
+
 
 }
 
-.items-div{
+.all,
+.PC,
+.smartphone{
+  cursor: pointer;
+}
 
-  max-width: 70%; 
+.items-div{
+  max-width: 70%;
   margin: 0 auto;
   flex-wrap: wrap;
   display: flex;

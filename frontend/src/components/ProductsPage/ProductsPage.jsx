@@ -16,7 +16,7 @@ const ProductsPage = () => {
     });
   };
 
-  const filterProducts = (e) => {
+  const filterProducts = e => {
     axios("http://localhost:8000/products")
     .then(res => {
       const target = e.target.className;
@@ -32,7 +32,6 @@ const ProductsPage = () => {
       }else{
         setProductItems(products);
       }
-      
     });
   };
 

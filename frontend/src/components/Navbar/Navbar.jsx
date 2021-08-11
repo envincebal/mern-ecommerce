@@ -25,9 +25,9 @@ export const NavigationBar = () => {
             Products
           </Button>
         </Link>
-        <Link to={"/contact"}>
+        <Link to={"/about"}>
           <Button className="link-item" variant="link">
-            Contact
+            About
           </Button>
         </Link>
         <div className="cart-div">
