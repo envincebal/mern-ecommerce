@@ -1,9 +1,15 @@
-.about-page{
+.about-page {
   padding-top: 7rem;
   margin: 0 auto;
   max-width: 50%;
 }
 
-.about-title{
+.about-title {
   text-align: center;
+}
+
+.social-media-div {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3rem;
 }

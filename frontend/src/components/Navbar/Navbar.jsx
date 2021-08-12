@@ -30,6 +30,11 @@ export const NavigationBar = () => {
             About
           </Button>
         </Link>
+        <Link to={"/profile"}>
+          <Button className="link-item" variant="link">
+            Profile
+          </Button>
+        </Link>
         <div className="cart-div">
           <Link to={"/cart"}>
             <i className="bi bi-cart2 link-item"></i>

@@ -1,24 +1,20 @@
-.products-container{
+.products-container {
   display: flex;
   padding-top: 7rem;
 }
 
-.aside-bar{
-
-
-}
+.aside-bar {}
 
 .all,
 .PC,
-.smartphone{
+.smartphone {
   cursor: pointer;
 }
 
-.items-div{
+.items-div {
   max-width: 70%;
   margin: 0 auto;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
 }
-

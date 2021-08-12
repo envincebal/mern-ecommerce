@@ -12,11 +12,11 @@ const AboutPage = () => {
         on all social media platforms linked below!
       </p>
       <div className="social-media-div">
-        <i class="bi bi-facebook"></i>
-        <i class="bi bi-twitter"></i>
-        <i class="bi bi-youtube"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-github"></i>
+        <i className="bi bi-facebook"></i>
+        <i className="bi bi-twitter"></i>
+        <i className="bi bi-youtube"></i>
+        <i className="bi bi-instagram"></i>
+        <i className="bi bi-github"></i>
       </div>
     </div>
   );
