@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
@@ -10,7 +10,13 @@ const ProductCard = (props) => {
       <div className="product-details">
         <h6>{props.name}</h6>
         <p> ${props.price}</p>
-        <button className="view-item-button">View Item</button>
+        <Link  style={{ textDecoration: 'none' }}
+          to={{
+            pathname: `/${props.name}`,
+            state: { name: props.name }
+          }}>
+            <button className="view-item-button">View Item</button>
+            </Link>
       </div>
     </div>
   );

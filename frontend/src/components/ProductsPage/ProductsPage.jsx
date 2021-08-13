@@ -5,39 +5,34 @@ import ProductCard from "../ProductCard/ProductCard";
 
 import "./ProductsPage.css";
 
-const ProductsPage = () => {
+const ProductsPage = (props) => {
   const [productItems, setProductItems] = useState([]);
 
-  const getProducts = () => {
+  useEffect(() => {
     axios("http://localhost:8000/products").then((res) => {
       const products = res.data;
 
+      localStorage.setItem("data", JSON.stringify(products));
+
       setProductItems(products);
     });
-  };
-
-  const filterProducts = e => {
-    axios("http://localhost:8000/products")
-    .then(res => {
-      const target = e.target.className;
-      const products = res.data;
-      const filteredProducts = products.filter(
-        (item) => item.category === target
-      );
-
-      if (target === "PC") {
-        setProductItems(filteredProducts);
-      }else if (target === "smartphone") {
-        setProductItems(filteredProducts);
-      }else{
-        setProductItems(products);
-      }
-    });
-  };
-
-  useEffect(() => {
-    getProducts();
   }, []);
+
+  const filterProducts = (e) => {
+    const target = e.target.className;
+    const storedData = JSON.parse(localStorage.getItem("data"));
+    const filteredProducts = storedData.filter(
+      (item) => item.category === target
+    );
+
+    if (target === "PC") {
+      setProductItems(filteredProducts);
+    } else if (target === "smartphone") {
+      setProductItems(filteredProducts);
+    } else {
+      setProductItems(storedData);
+    }
+  };
 
   return (
     <div className="products-page">
@@ -54,7 +49,6 @@ const ProductsPage = () => {
             Smartphones
           </p>
         </div>
-        {console.log(productItems)}
         <div className="items-div">
           {productItems.map((product) => {
             return (

@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 
 import "./Navbar.css";
 
-export const NavigationBar = () => {
+export const NavigationBar = (props) => {
   return (
     <Navbar className="navbar" bg="dark" variant="dark">
       <Link to={"/"}>
@@ -39,7 +39,7 @@ export const NavigationBar = () => {
           <Link to={"/cart"}>
             <i className="bi bi-cart2 link-item"></i>
           </Link>
-          <span className="cart-counter">0</span>
+          <span className="cart-counter">{props.count}</span>
         </div>
 
         <Link to="/">

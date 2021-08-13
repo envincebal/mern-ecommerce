@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import NavigationBar from "./components/Navbar/Navbar";
@@ -10,17 +11,19 @@ import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 
 function App() {
+  const [cartCount, setCartCount] = useState(0);
   return (
     <div className="App">
       <BrowserRouter>
-        <NavigationBar />
+        <NavigationBar count={cartCount} />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/products" component={ProductsPage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/profile" component={ProfilePage} />
           <Route exact path="/cart" component={CartPage} />
-          <Route exact path="/details" component={ProductDetails} />
+          <Route exact path="/:details" render={() => <ProductDetails setCartCount={setCartCount} />} />
+
         </Switch>
       </BrowserRouter>
 

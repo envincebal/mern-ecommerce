@@ -1,17 +1,28 @@
 import React from "react";
 import "./ProductDetails.css";
-
+import { useLocation } from 'react-router-dom';
 const ProductDetails = (props) => {
+  const cartCounter = (counter) => {
+    props.setCartCount(counter += 1);
+    console.log(counter);
+  }
+
+  const location = useLocation();
+  const products = JSON.parse(localStorage.getItem("data"));
+  const productInfo = products.find(item => item.name === location.state.name);
+  const {name, image, price} = productInfo;
+  
   return (
     <div className="details-container">
       <div className="details-card">
-        <img className="details-img" src="https://github.com/envincebal/mern-ecommerce/blob/master/frontend/src/img/products/Acer_Nitro_50.jpg?raw=true" alt="PC" />
+        <img className="details-img" src={image} alt={name} />
         <div className="details-div">
-          <h3 className="details-title">Acer_Nitro_50</h3>
-          <p className="details-price">$2399.00</p>
-          <button className="add-to-cart">
+          <h3 className="details-title">{name}</h3>
+          <p className="details-price">${price}</p>
+          <button className="add-to-cart" onClick={() => props.setCartCount(cartCounter)}>
             Add To Cart
           </button>
+          {console.log(useLocation())}
         </div>
       </div>
     </div>
