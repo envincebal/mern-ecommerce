@@ -1,8 +1,16 @@
 import React from "react";
 
+import CartItem from "../CartItem/CartItem";
 import "./CartPage.css";
 
 const CartPage = (props) => {
+  const minusItem = (counter) => {
+    props.setCartCount((counter -= 1));
+  };
+  const addItem = (counter) => {
+    props.setCartCount((counter += 1));
+  };
+
   return (
     <div className="cart-page">
       <h3 className="cart-title">Shopping Cart</h3>
@@ -13,32 +21,30 @@ const CartPage = (props) => {
             <h5>QUANTITY</h5>
             <h5>PRICE</h5>
           </div>
-          <div className="item">
-            <p>Product</p>
-            <p>
-              <i class="bi bi-dash-square-fill minus-item"></i>
-              1
-              <i class="bi bi-plus-square-fill add-item"></i>
-            </p>
-            <p>Price</p>
-            <p>Delete</p>
-          </div>
-          <div className="item">
-            <p>Product</p>
-            <p>Quantity</p>
-            <p>Price</p>
-            <p>Delete</p>
-          </div>
+          {props.cartItems.map((item, id) => {
+            return (
+              <CartItem
+                key={id}
+                name={item.name}
+                price={item.price}
+                setCartCount={props.setCartCount}
+                minusItem={minusItem}
+                addItem={addItem}
+                setCartTotal={props.setCartTotal}
+              />
+            );
+          })}
         </div>
         <div className="order-summary">
           <h5>Order Summary</h5>
           <hr />
           <h6>Items</h6>
-          <p>0</p>
+          <p>{props.cartCount}</p>
           <h6>Total Price</h6>
-          <p>$1.00</p>
+          <p>${props.cartTotal}</p>
           <button>Checkout</button>
         </div>
+        
       </div>
     </div>
   );

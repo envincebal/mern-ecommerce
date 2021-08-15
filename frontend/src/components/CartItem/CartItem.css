@@ -1,0 +1,18 @@
+.item {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border: 1px solid #000;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.item p {
+  margin: 0.7rem 0;
+}
+
+.minus-item,
+.add-item {
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
